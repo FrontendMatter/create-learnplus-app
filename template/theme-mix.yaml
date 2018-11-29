@@ -1,0 +1,53 @@
+runTasks:
+  clean: true
+  js: true
+  copy: true
+  sass: true
+  html: true
+enableCssThemes: false
+enableCssRTL: true
+copyCwd: node_modules
+copyDest: dist/assets/vendor
+copy:
+  - jquery/dist/jquery.min.js
+  - bootstrap/dist/js/bootstrap.min.*
+  - popper.js/dist/umd/popper.min.*
+  - dom-factory/dist/*
+  - material-design-kit/dist/material-design-kit.*<% if (plugins.reIncludes(/spinner/)) { %>
+  - bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js<% } %><% if (plugins.reIncludes(/charts/)) { %>
+  - chart.js/dist/Chart.min.js<% } %><% if (plugins.reIncludes(/tree/)) { %>
+  - jquery.fancytree/dist/jquery.fancytree-all.min.js<% } %><% if (plugins.reIncludes(/calendar/)) { %>
+  - fullcalendar/dist/fullcalendar.min.js<% } %><% if (plugins.reIncludes(/charts/)) { %>
+  - moment/min/moment.min.js
+  - moment-range/dist/moment-range.min.js<% } %><% if (plugins.reIncludes(/date-range/)) { %>
+  - flatpickr/dist/flatpickr.min.{js,css}: dist/assets/vendor/flatpickr
+  - flatpickr/dist/themes/airbnb.css: dist/assets/vendor/flatpickr<% } %><% if (plugins.reIncludes(/mask/)) { %>
+  - jquery-mask-plugin/dist/jquery.mask.min.js<% } %><% if (plugins.reIncludes(/rich-text/)) { %>
+  - quill/dist/quill.min.js<% } %><% if (plugins.reIncludes(/nestable/)) { %>
+  - nestable/jquery.nestable.js<% } %>
+  - perfect-scrollbar/css/*
+  - perfect-scrollbar/dist/*.min.js<% if (plugins.reIncludes(/sweet-alert/)) { %>
+  - sweetalert/dist/sweetalert.min.js<% } %><% if (plugins.reIncludes(/vector-maps/)) { %>
+  - jvectormap/jquery.jvectormap.min.js
+  - jvectormap/jquery-jvectormap.css<% } %><% if (plugins.reIncludes(/countdown/)) { %>
+  - easy-countdown/dest/jquery.countdown.min.js<% } %><% if (plugins.reIncludes(/upload/)) { %>
+  - dropzone/dist/min/dropzone.min.js
+  - dropzone/dist/min/dropzone.min.css<% } %>
+  - material-design-icons-iconfont/dist/fonts/*.{eot,ttf,woff,woff2}: dist/assets/fonts/material-icons
+  - '@fortawesome/fontawesome-free/webfonts/*': dist/assets/fonts/fontawesome-free<% if (plugins.reIncludes(/drag/)) { %>
+  - dragula/dist/dragula.min.{js,css}: dist/assets/vendor/dragula<% } %><% if (plugins.reIncludes(/tables/)) { %>
+  - list.js/dist/list.min.js<% } %>
+clean:
+  - dist/**/*.html
+  - dist/assets/{css,fonts,js,vendor}
+sassSrc: src/sass/**/*.scss
+cssDest: dist/assets/css
+jsSrc: src/js/**/**.js
+jsDest: dist/assets/js
+htmlDest: dist/[path][name].html
+htmllint: false
+laravelMixOptions:
+  processCssUrls: false
+browserSync:
+  server:
+    index: student-dashboard.html

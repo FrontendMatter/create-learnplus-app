@@ -1,0 +1,43 @@
+---
+title: Login
+slug: guest-login
+prefix: ''
+---
+{% extends "layouts/guest/login.html" %}
+
+{% block page %}
+<div class="row">
+  <div class="col-sm-8 col-md-4 col-lg-4 mx-auto">
+    <div class="text-center m-2">
+      <div class="icon-block rounded-circle">
+        <i class="material-icons align-middle md-36 text-muted">lock</i>
+      </div>  
+    </div>
+    <div class="card bg-transparent">
+      <div class="card-header text-center">
+        <h4 class="card-title">Login</h4>
+        <p class="card-subtitle">Access your account</p>
+      </div>
+      <div class="card-body">
+        <form action="student-dashboard.html" method="get">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+          <div class="form-group ">
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+          </div>
+          <div class="text-center">
+            <a href="#"><small>Forgot Password?</small></a> 
+          </div>
+        </form>
+      </div>
+      <div class="card-footer text-center bg-white">
+        Not yet a student? <a href="guest-signup.html">Sign up</a> 
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

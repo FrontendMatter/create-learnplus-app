@@ -1,0 +1,59 @@
+<!-- User dropdown -->
+<li class="nav-item dropdown dropdown-notifications dropdown-full-xs d-none d-sm-flex">
+  <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-caret="false">
+    <i class="material-icons">notifications</i>
+    <span class="badge badge-pill badge-danger">2</span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action">
+        <small class="text-muted list-group-item-meta">3 min ago</small>
+        <div class="media">
+          <div class="media-left align-self-center">
+            <i class="material-icons md-2 icon--left text-danger">account_circle</i>
+          </div>
+          <div class="media-body align-self-center">
+            <p class="mb-1 lh-1">Your profile information has not been synced correctly.</p>
+          </div>
+        </div>
+      </a>
+      <div class="list-group-item list-group-item-action">
+        <small class="text-muted list-group-item-meta">5 hrs ago</small>
+        <div class="media">
+          <div class="media-left align-self-center">
+            <i class="material-icons md-2 icon--left text-success">group_add</i>
+          </div>
+          <div class="media-body align-self-center">
+            <p class="mb-1 lh-1"><a href="#" class="flex-inline">Adrian. D</a> wants to join you.</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="list-group-item list-group-item-action">
+        <small class="text-muted list-group-item-meta">1 day ago</small>
+        <div class="media">
+          <div class="media-left align-self-center">
+            <i class="material-icons md-2 icon--left text-warning">storage</i>
+          </div>
+          <div class="media-body align-self-center">
+            <p class="mb-1 lh-1">Your deploy was successful.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button"><img src="assets/images/people/50/guy-6.jpg" alt="Avatar" class="rounded-circle" width="40"></a>
+  <div class="dropdown-menu dropdown-menu-right">
+    <a class="dropdown-item" href="{{ prefix or '' }}account-edit.html">
+      <i class="material-icons">edit</i> Edit Account
+    </a>
+    <a class="dropdown-item" href="{{ prefix or '' }}profile.html">
+      <i class="material-icons">person</i> Public Profile
+    </a>
+    <a class="dropdown-item" href="guest-login.html">
+      <i class="material-icons">lock</i> Logout
+    </a>
+  </div>
+</li>
+<!-- // END User dropdown -->

@@ -1,0 +1,42 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "private": true,
+  "description": "<%= description %>",
+  "scripts": {
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "serve": "lite-server -c node_modules/theme-mix/bs-config.json ./dist"
+  },
+  "author": "<%= author %>",
+  "license": "UNLICENSED",
+  "dependencies": {<% if (plugins.reIncludes(/spinner/)) { %>
+    "bootstrap-touchspin": "^3.1.1",<% } %><% if (plugins.reIncludes(/charts/)) { %>
+    "chart.js": "^2.7.3",<% } %><% if (plugins.reIncludes(/drag/)) { %>
+    "dragula": "^3.7.2",<% } %><% if (plugins.reIncludes(/upload/)) { %>
+    "dropzone": "^5.5.1",<% } %><% if (plugins.reIncludes(/countdown/)) { %>
+    "easy-countdown": "^2.1.0",<% } %><% if (plugins.reIncludes(/date-range/)) { %>
+    "flatpickr": "^4.5.2",<% } %><% if (plugins.reIncludes(/calendar/)) { %>
+    "fullcalendar": "^2.7.0",<% } %><% if (plugins.reIncludes(/mask/)) { %>
+    "jquery-mask-plugin": "^1.14.15",<% } %><% if (plugins.reIncludes(/tree/)) { %>
+    "jquery.fancytree": "^2.30.0",<% } %><% if (plugins.reIncludes(/vector-maps/)) { %>
+    "jvectormap": "github:lazabogdan/jvectormap#master",<% } %><% if (plugins.reIncludes(/tables/)) { %>
+    "list.js": "^1.5.0",<% } %><% if (plugins.reIncludes(/charts/)) { %>
+    "moment": "^2.22.2",
+    "moment-range": "^2.2.0",
+    "moment-timezone": "^0.5.21",<% } %><% if (plugins.reIncludes(/nestable/)) { %>
+    "nestable": "^0.2.0",<% } %><% if (plugins.reIncludes(/rich-text/)) { %>
+    "quill": "^1.3.6",<% } %><% if (plugins.reIncludes(/sweet-alert/)) { %>
+    "sweetalert": "^1.1.3",<% } %>
+    "ui-learnplus-bootstrap": "gitlab:FrontendMatter/ui-learnplus-bootstrap#master"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^5.2.0",
+    "lite-server": "^2.4.0",
+    "surge": "^0.20.1",
+    "theme-mix": "^1.0.1"
+  }
+}
