@@ -1,6 +1,6 @@
 # Create LearnPlus App
 
-[![NPM version](https://img.shields.io/npm/v/create-nuxt-app.svg?style=flat)](https://npmjs.com/package/create-nuxt-app)
+[![NPM version](https://img.shields.io/npm/v/create-learnplus-app.svg?style=flat)](https://npmjs.com/package/create-learnplus-app)
 
 > Create a [LearnPlus](http://learnplus.frontendmatter.com) starter project in seconds.
 
